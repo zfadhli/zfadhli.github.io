@@ -1,6 +1,4 @@
-# Nextw Starter
-
-This is a starter template for Next.js and Tailwind project.
+# Zulfadhli's Portfolio
 
 ## Tech Stacks
 
@@ -10,7 +8,7 @@ This is a starter template for Next.js and Tailwind project.
 ## Getting Started
 
 ```bash
-pnpx degit zfadhli/nextw-starter
+pnpx degit zfadhli/zfadhli.github.io
 pnpm i
 pnpm run dev
 ```
