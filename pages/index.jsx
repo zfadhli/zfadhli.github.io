@@ -101,8 +101,8 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className='flex flex-col justify-between'>
-                      <div className='flex-1'>
+                    <div className='flex flex-col justify-between flex-1'>
+                      <div>
                         <h3 className='text-xl font-bold'>{project.title}</h3>
                         <a href={project.url} className='text-sm text-slate-500'>
                           {project?.website}
