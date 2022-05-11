@@ -2,6 +2,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import LocalImage from '../components/local-image'
 import ExternalLinkIcon from '../public/icons/external-link.svg'
+import LocationMarkerIcon from '../public/icons/location-marker.svg'
+import InboxIcon from '../public/icons/inbox.svg'
+import PhoneIcon from '../public/icons/phone.svg'
+import GithubIcon from '../public/icons/github.svg'
+import TwitterIcon from '../public/icons/twitter.svg'
 
 const projects = [
   {
@@ -40,7 +45,7 @@ export default function Home() {
 
       <div className='w-full min-h-screen antialiased bg-indigo-50 text-slate-900 font-inter'>
         <section className='border-t-8 border-indigo-600'>
-          <div className='container py-8'>
+          {/* <div className='container py-8'>
             <div className='flex items-center justify-between'>
               <Link href='/'>
                 <a className='text-xl font-bold'>zfadhli</a>
@@ -58,17 +63,19 @@ export default function Home() {
                 </Link>
               </nav>
             </div>
-          </div>
+          </div> */}
         </section>
 
         <section className='section'>
           <div className='container'>
             <div className='grid grid-cols-2 gap-x-8'>
               <div className='flex flex-col justify-center'>
-                <h1 className='text-5xl font-extrabold tracking-tight'>Zulfadhli Zakari</h1>
-                <p className='pt-1 text-gray-600'>Web developer</p>
-                <p className='pt-4 text-gray-700'>
-                  I am a passionate developer who build things for the web with NodeJS and Reactjs
+                <h1 className='text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-600'>
+                  Zulfadhli Zakari
+                </h1>
+                <p className='pt-1 text-gray-700'>Web developer</p>
+                <p className='pt-4 text-lg text-gray-700'>
+                  I am a passionate developer who build things for the web with NodeJS and Reactjs.
                 </p>
               </div>
               <div className='flex items-center justify-end'>
@@ -128,6 +135,63 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className='section'>
+          <div className='container'>
+            <div>
+              <h2 className='text-4xl font-bold tracking-tight'>Contact</h2>
+            </div>
+            <div className='grid grid-cols-2 pt-10 gap-x-8'>
+              <div>
+                <h3 className='text-xl font-bold text-slate-700'>Get in touch</h3>
+                <div className='pt-4 space-y-2'>
+                  <div className='flex gap-x-2'>
+                    <LocationMarkerIcon className='w-7 h-7' />
+                    <span className='text-slate-700'>
+                      No. 3, Kampung Pulau Belayar, 33300 Gerik, Perak, Malaysia
+                    </span>
+                  </div>
+                  <div className='flex gap-x-2'>
+                    <InboxIcon className='w-6 h-6' />
+                    <span className='text-slate-700'>zulfadhlizakari@gmail.com</span>
+                  </div>
+                  <div className='flex gap-x-2'>
+                    <PhoneIcon className='w-6 h-6' />
+                    <span className='text-slate-700'>+60134432488</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className='text-xl font-bold text-slate-700'>Socials</h3>
+                <div className='pt-4 space-y-2'>
+                  <div className='flex gap-x-2'>
+                    <GithubIcon className='w-6 h-6' />
+                    <a
+                      className='border-b-4 border-transparent hover:border-indigo-600'
+                      href='https://github.com/zfadhli'
+                      target='_blank'
+                      rel='noopener'
+                    >
+                      Github
+                    </a>
+                  </div>
+                  <div className='flex gap-x-2'>
+                    <TwitterIcon className='w-6 h-6' />
+                    <a
+                      className='border-b-4 border-transparent hover:border-indigo-600'
+                      href='https://twitter.com/zfadhlizakari'
+                      target='_blank'
+                      rel='noopener'
+                    >
+                      Twitter
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className='py-8 text-center'>
           <div className='text-sm'>
             Build with ❤ by{' '}
