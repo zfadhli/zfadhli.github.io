@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import LocalImage from '../components/local-image'
+import ExternalLinkIcon from '../public/icons/external-link.svg'
 
 const projects = [
   {
@@ -110,13 +111,34 @@ export default function Home() {
                         <p className='pt-6 text-sm text-gray-700'>{project.description}</p>
                       </div>
                       <div className='mt-auto'>
-                        <button className='button'>Read More</button>
+                        <a
+                          href={project.url}
+                          className='relative space-x-2 button'
+                          target='_blank'
+                          rel='noopener'
+                        >
+                          <ExternalLinkIcon className='w-6 h-6' />
+                          <span>Visit Site</span>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+        <section className='py-8 text-center'>
+          <div className='text-sm'>
+            Build with ❤ by{' '}
+            <a
+              className='font-bold'
+              href='https://github.com/zfadhli'
+              target='_blank'
+              rel='noopener'
+            >
+              zfadhli
+            </a>
           </div>
         </section>
       </div>
