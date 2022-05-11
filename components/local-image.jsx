@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next-image-export-optimizer'
 
 function cn(...classes) {
   return classes.filter(Boolean).join(' ')

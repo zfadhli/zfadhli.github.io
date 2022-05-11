@@ -10,27 +10,32 @@ import TwitterIcon from '../public/icons/twitter.svg'
 
 const projects = [
   {
-    imgUrl: '/supabase-bookmark.png',
+    imgUrl: '/images/supabase-bookmark.png',
     alt: 'Supabase bookmark',
     title: 'Supabase Bookmark',
     url: 'https://supabase-bookmark.vercel.app/',
-    website: 'supabase-bookmark.vercel.app',
+    github: 'zfadhli/supabase-bookmark',
+    githubUrl: 'https://github.com/zfadhli/supabase-bookmark',
     description: 'A bookmark application build with Next.js and Supabase',
   },
   {
-    imgUrl: '/tailwind-unsplash-gallery.png',
+    imgUrl: '/images/tailwind-unsplash-gallery.png',
     alt: 'Tailwind Unsplash Gallery',
     title: 'Tailwind Unsplash Gallery',
-    url: 'http://tailwind-unsplash-gallery.vercel.app/',
-    website: 'tailwind-unsplash-gallery.vercel.app',
+    url: 'https://tailwind-unsplash-gallery.vercel.app/',
+    github: 'zfadhli/supabase-bookmark',
+    githubUrl: 'https://github.com/zfadhli/tailwind-unsplash-gallery',
+    website: 'zfadhli/tailwind-unsplash-gallery',
     description: 'Next.js application for unsplash gallery',
   },
   {
-    imgUrl: '/tailwind-devkit-landing-3.png',
+    imgUrl: '/images/tailwind-devkit-landing-3.png',
     alt: 'Tailwind Devkit Landing 3',
     title: 'Tailwind Devkit Landing 3',
     url: 'https://tailwind-devkit-landing-3.vercel.app/',
-    website: 'tailwind-devkit-landing-3.vercel.app',
+    github: 'zfadhli/tailwind-devkit-landing-3',
+    githubUrl: 'https://github.com/zfadhli/tailwind-devkit-landing-3',
+    website: 'zfadhli/tailwind-devkit-landing-3',
     description: 'This is a clone of Devkit Landing 3. Build with Next.js and Tailwindcss.',
   },
 ]
@@ -82,7 +87,7 @@ export default function Home() {
                 <div className=' w-52 h-52'>
                   <LocalImage
                     className='border-4 rounded-full shadow-md border-slate-200'
-                    src='/profile-small.png'
+                    src='/images/profile-small.png'
                     alt='Zulfadhli Zakari'
                   />
                 </div>
@@ -112,9 +117,17 @@ export default function Home() {
                     <div className='flex flex-col justify-between flex-1'>
                       <div>
                         <h3 className='text-xl font-bold'>{project.title}</h3>
-                        <a href={project.url} className='text-sm text-slate-500'>
-                          {project?.website}
-                        </a>
+                        <div className='flex items-center pt-1 gap-x-2'>
+                          <GithubIcon className='w-4 h-4' />
+                          <a
+                            className='text-sm border-b-4 border-transparent text-slate-500 hover:border-indigo-600'
+                            href={project.githubUrl}
+                            target='_blank'
+                            rel='noopener'
+                          >
+                            {project?.github}
+                          </a>
+                        </div>
                         <p className='pt-6 text-sm text-gray-700'>{project.description}</p>
                       </div>
                       <div className='mt-auto'>
